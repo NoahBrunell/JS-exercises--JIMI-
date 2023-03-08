@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ccc;
+}
+
+#dice {
+    height: 20vw;
+    width: 20vw;
+    background-color: white;
+    border-radius: 34px;
+}
+
+#button {
+    margin-top: 10vh;
+    width: 20vw;
+    height: 5vh;
+    background-color: #aaa;
+}
+
+#button:active {
+    background-color: #999;
+}
