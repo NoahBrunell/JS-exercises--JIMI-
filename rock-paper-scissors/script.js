@@ -1,8 +1,14 @@
-const playerChoice = document.getElementById('player-choice')
 const resultText = document.getElementById('result')
 let chosenHand = ''
 let computerChoice = ''
 let result = ''
+
+document.getElementById('play-again').addEventListener('click', () => {
+    chosenHand = ''
+    computerChoice = ''
+    result = ''
+    document.getElementById('play-again').style.display = 'none'
+})
 
 function determineResult() {
     if (chosenHand == computerChoice) result = 'Draw!'
@@ -13,7 +19,8 @@ function determineResult() {
     if ((chosenHand == 'Scissors') && (computerChoice == 'Paper')) result = 'Win!'
     if ((chosenHand == 'Scissors') && (computerChoice == 'Rock')) result = 'Loss!'
 
-    resultText.innerText = result
+    resultText.innerHTML = result
+    document.getElementById('play-again').style.display = 'block'
 }
 
 function generateRandomChoice () {
@@ -21,24 +28,20 @@ function generateRandomChoice () {
     if (randomNumber == 1) computerChoice = 'Rock'
     if (randomNumber == 2) computerChoice = 'Paper'
     if (randomNumber == 3) computerChoice = 'Scissors'
-    document.getElementById('computer-choice').innerText = computerChoice
     determineResult()
 }
 
 function chooseRock () {
     chosenHand = 'Rock'
-    playerChoice.innerText = chosenHand
     generateRandomChoice()
 }
 
 function choosePaper () {
     chosenHand = 'Paper'
-    playerChoice.innerText = chosenHand
     generateRandomChoice()
 }
 
 function chooseScissors () {
     chosenHand = 'Scissors'
-    playerChoice.innerText = chosenHand
     generateRandomChoice()
 }
