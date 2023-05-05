@@ -1,0 +1,29 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222;
+}
+
+#container {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 200px;
+    background-color: #444;
+}
+
+button {
+    background-color: white;
+    border: 1px solid black;
+    padding: 12px 24px;
+}
+
+h1 {
+    color: white;
+}
